@@ -1,0 +1,11 @@
+<div class="main-container">
+	<div class="marko-container">
+        <div [class]="processing? 'center-top-display' : 'center-top-display-none'">
+            <ng-content select="[progress-content]"> </ng-content>
+		</div>
+		<div class="content">
+            <ng-content select="[background-content]"></ng-content>
+		</div>
+	</div>
+</div>
+

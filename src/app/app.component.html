@@ -1,0 +1,65 @@
+<app-marko  [value]="showModal" style="width: 100%;">
+<div class="container" background-content>
+  <div class="cardHolder">
+    <div style="width: 50%;height: 40px; padding-left: 2px; border-radius: 30px;border: 0.2px solid grey;display: flex;">
+      <div style="width:40px;height: 40px;border-radius: 30px; background-color:aliceblue; text-align: center;">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/search.png" width="20px" height="20px"
+          style="margin-top: 10px;" />
+      </div>
+      <input type="text" class="SearchBox" placeholder="Search your favourite recipe... " [(ngModel)]="searchrecipieTitles"
+        (ngModelChange)="Search()">
+    </div>
+    <div style="width: 100%; height: 80px;">
+      <div style="text-align: right;width: 100%;">category</div>
+      <div style="text-align: right;width: 100%;">
+        <h1 style="margin: 0;font-family: metropolis-bold;">Pizza & Noodles</h1>
+      </div>
+    </div>
+    <div class="card-deck-container">
+      <div *ngFor="let i of recipe" class="card">
+        <img [src]="i['image']" width="96%" height="98%" style="border-radius: 20px;"/>
+        <div class="text-block">
+          <h5 style="margin-top:2px;margin-bottom: 0;cursor: pointer;"(click)="showPopUp(i)" innerHTML="{{highlight(i['name'])}}"></h5>
+          <p style="font-size:small;">{{i['description']}}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<ng-container progress-content>
+  <div style="width: 800px;height: 600px;background-color: whitesmoke; border-radius: 10px;">
+     <div class="popUp">
+       <div style="width: 100%;height: 5%;display: flex; text-align: center ;">
+        <span (click)="goBack()"style="cursor: pointer;">&#11164;&nbsp; Go Back</span>
+       </div>
+      <div style="width: 100%;border-radius: 300px;height:95%; display: flex;">
+        <div style="width: 50%;height: 100%;border-radius: 30px;">
+          <img [src]="popupRec['image']" height="100%" width="100%" style="border-radius: 30px;">
+        </div>
+        <div style="width: 50%; height: 100%;padding: 2%;">
+        &nbsp;&nbsp; <h1 style="font-family: metropolis-bold; margin: 0;">{{popupRec['name']}}</h1><br>
+        <br>
+        <div style="display: flex;padding: 2px;">
+        <h3 style="margin: 0;">Category&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</h3><h3 style="margin: 0;">{{popupRec['category']}}</h3>
+        </div>
+        <div style="display: flex;padding: 2px;">
+          <h3 style="margin: 0;">Label&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</h3><h3 style="margin: 0;">{{popupRec['label']}}</h3>
+          </div>
+          <div style="display: flex;padding: 2px;">
+            <h3 style="margin: 0;">Price&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</h3><h3 style="margin: 0;">{{popupRec['price']}}</h3>
+            </div>
+            <div style="display: flex;padding: 2px;">
+              <h3 style="margin: 0;">Description&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</h3><h3 style="margin: 0;">{{popupRec['description']}}</h3>
+              </div>
+
+
+        </div>
+        
+       </div>
+
+     </div>
+  </div>
+</ng-container>
+</app-marko>

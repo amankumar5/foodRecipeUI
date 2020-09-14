@@ -1,0 +1,45 @@
+.main-container {
+    display: flex;
+    width: 100%;
+    background-color: none;
+    height: 100%;
+}
+
+.marko-container {
+    display: flex;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: none;
+    width: 100%;
+    background-color: none;
+}
+
+.center-top-display {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0.99;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-top-display-none {
+    display: none;
+}
+
+.center {
+    position: relative;
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    background-color: none;
+}

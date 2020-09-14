@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: metropolis-Black;
+    src: url('/assets/Fonts/Metropolis/Metropolis-Black.otf');
+  }
+  @font-face {
+    font-family: metropolis;
+    src: url('/assets/Fonts/Metropolis/Metropolis-BlackItalic.otf');
+  }
+  @font-face {
+    font-family: metropolis-Bold;
+    src: url('/assets/Fonts/Metropolis/Metropolis-Bold.otf');
+  }
+  @font-face {
+    font-family: metropolis;
+    src: url('/assets/Fonts/Metropolis/Metropolis-BoldItalic.otf');
+  }
+  @font-face {
+    font-family: metropolis;
+    src: url('/assets/Fonts/Metropolis/Metropolis-ExtraLight.otf');
+  }
+  @font-face {
+    font-family: metropolis;
+    src: url('/assets/Fonts/Metropolis/Metropolis-Light.otf');
+  }
+  @font-face {
+    font-family: metropolis-reg;
+    src: url('/assets/Fonts/Metropolis/Metropolis-Ragular.otf');
+  }
